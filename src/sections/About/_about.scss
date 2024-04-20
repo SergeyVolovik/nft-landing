@@ -1,0 +1,27 @@
+.about {
+	@include section(30rem);
+
+	@include _mobile {
+		@include section(10rem);
+	}
+
+	&__title {
+		@include section_title;
+	}
+
+	&__paragraph {
+		@include paragraph(4rem);
+	}
+
+	@include _desktop-c(1735px) {
+		margin-top: 20rem;
+	}
+
+	@include _tablet {
+		margin-top: 13.6rem;
+	}
+
+	@include _tablet-c(540px) {
+		margin-top: 6rem;
+	}
+}

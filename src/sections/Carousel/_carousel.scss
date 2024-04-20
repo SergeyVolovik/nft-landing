@@ -1,0 +1,59 @@
+.carousel {
+	width: 100%;
+
+	margin-top: 15rem;
+	display: flex;
+
+	&__slider {
+		width: 100%;
+
+		@include _desktop-c(1536px) {
+			height: 36rem !important;
+		}
+		@include _desktop-xs {
+			height: 28rem !important;
+		}
+		@include _mobile {
+			height: 10rem !important;
+		}
+	}
+
+	&__img {
+		width: 46rem;
+		margin: 0 2rem;
+		object-fit: cover;
+
+		@include _desktop-c(1536px) {
+			width: 36rem;
+		}
+
+		@include _desktop-xs {
+			width: 28rem;
+		}
+		@include _mobile {
+			width: 10rem;
+
+			margin: 0 0.45rem;
+		}
+	}
+
+	& ~ & {
+		margin-top: 4rem;
+
+		@include _mobile {
+			margin-top: 0.9rem;
+		}
+	}
+
+	@include _desktop-c(1535px) {
+		margin-top: 3.5rem;
+	}
+
+	@include _tablet {
+		margin-top: 13.6rem;
+	}
+
+	@include _tablet-c(540px) {
+		margin-top: 6rem;
+	}
+}

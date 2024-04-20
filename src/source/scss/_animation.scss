@@ -1,0 +1,36 @@
+@mixin progressbar {
+	@keyframes fill-progressbar-before {
+		from {
+			width: 0;
+		}
+	}
+	@keyframes fill-progressbar-after {
+		from {
+			width: 0;
+		}
+	}
+
+	&::before {
+		animation: fill-progressbar-before 2s ease 1 normal both;
+	}
+
+	&::after {
+		animation: fill-progressbar-after 2s ease 1 normal both;
+	}
+}
+
+@mixin animation($animation_name, $property, $sv, $ev, $d) {
+	animation: #{$animation_name} 2s ease 1 normal both;
+	animation-delay: $d;
+
+	@keyframes #{$animation_name} {
+		0% {
+			#{$property}: $sv;
+			opacity: 0;
+		}
+		100% {
+			#{$property}: $ev;
+			opacity: 1;
+		}
+	}
+}

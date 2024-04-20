@@ -1,0 +1,45 @@
+@import "~@csstools/normalize.css";
+@import "./vars";
+@import "./breakpoints";
+@import "./media_mixins";
+@import "./mixins";
+@import "./animation";
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $bgTransparentMain;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $gradient;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+
+	font-family: $fontFamilyMain;
+	font-size: $fontSizeMain;
+	background: $bgColorMain;
+}
+
+#root {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+@import "./../../components/index";
+@import "./../../sections/index";

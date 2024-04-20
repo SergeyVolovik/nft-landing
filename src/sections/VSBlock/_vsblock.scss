@@ -1,0 +1,355 @@
+.vs_block {
+	width: 100%;
+
+	margin-top: 2rem;
+	padding: 0 12rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	position: relative;
+	background: #000 url(./img/bg.png) no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	overflow: hidden;
+
+	&__imgs {
+		width: 100%;
+		min-height: 110vh;
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		z-index: 1;
+
+		&-img {
+			position: absolute;
+			bottom: 5rem;
+
+			&:nth-of-type(1) {
+				width: 100%;
+				max-width: 64rem;
+				left: 0;
+
+				@include _desktop-c(1536px) {
+					max-width: 50rem;
+				}
+				@include _tablet {
+					max-width: 35rem;
+				}
+				@include _tablet-c(767px) {
+					max-width: 20rem;
+				}
+				@include _tablet-c(540px) {
+					max-width: 17.8rem;
+				}
+				@include _mobile {
+					max-width: 12rem;
+				}
+				@include _mobile-xs {
+					max-width: 11rem;
+				}
+			}
+
+			&:nth-of-type(2) {
+				width: 100%;
+				max-width: 64rem;
+				right: 0;
+
+				@include _desktop-c(1536px) {
+					max-width: 50rem;
+				}
+				@include _tablet {
+					max-width: 35rem;
+				}
+				@include _tablet-c(767px) {
+					max-width: 20rem;
+				}
+				@include _tablet-c(540px) {
+					max-width: 17.8rem;
+				}
+				@include _mobile {
+					max-width: 12rem;
+				}
+				@include _mobile-xs {
+					max-width: 11rem;
+				}
+			}
+
+			@include _tablet {
+				bottom: 0;
+			}
+		}
+
+		&-shadow {
+			width: 100%;
+			height: 55%;
+
+			background: linear-gradient(360deg, #01001c 12.79%, rgba(1, 0, 28, 0) 71.25%);
+			position: absolute;
+			left: 0;
+			z-index: 0;
+
+			&:first-child {
+				height: 45%;
+				background: linear-gradient(180deg, #01001c 10.79%, rgba(1, 0, 28, 0) 71.25%);
+				top: 0;
+			}
+
+			&:last-child {
+				bottom: 0;
+			}
+		}
+
+		&-vs {
+			width: 100%;
+			max-width: 28.5rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+
+			&-img {
+				width: 100%;
+				object-fit: cover;
+
+				&-v {
+					width: 100%;
+					object-fit: cover;
+					position: absolute;
+				}
+
+				&-s {
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+
+			@include _desktop-c(1536px) {
+				max-width: 22.5rem;
+			}
+			@include _tablet {
+				max-width: 12.5rem;
+			}
+			@include _tablet-c(767px) {
+				max-width: 8.5rem;
+			}
+			@include _tablet-c(540px) {
+				max-width: 6.4rem;
+			}
+			@include _mobile {
+				max-width: 4.4rem;
+			}
+		}
+
+		&-statistic {
+			width: 100%;
+			max-width: 55.8rem;
+			margin: 0 2rem 7rem 0;
+
+			z-index: 1;
+
+			&-block {
+				width: 100%;
+				margin-bottom: 1.2rem;
+
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@include _tablet-c(767px) {
+					margin-bottom: 0.3rem;
+				}
+				@include _mobile {
+					justify-content: flex-start;
+				}
+			}
+
+			.title {
+				width: 100%;
+				max-width: 11rem;
+
+				margin: 0 2rem 0 0;
+				font-size: 2.4rem;
+				font-family: $fontFamilyMain3;
+				font-style: italic;
+				color: $white;
+
+				text-transform: uppercase;
+
+				@include _tablet {
+					max-width: 7rem;
+					font-size: 1.6rem;
+				}
+
+				@include _tablet-c(540px) {
+					max-width: 3rem;
+
+					margin-right: 0.5rem;
+
+					font-size: 0.6rem;
+				}
+			}
+
+			.progressbar {
+				width: 100%;
+				max-width: 42rem;
+
+				padding: 1.2rem 0;
+
+				position: relative;
+				clip-path: polygon(0 0, 100% 0%, 97% 100%, 0% 100%);
+
+				@include progressbar;
+
+				&::after {
+					content: "";
+
+					padding: 1.2rem 0;
+
+					display: block;
+
+					position: absolute;
+					top: 0;
+
+					clip-path: polygon(0 0, 100% 0%, 97% 100%, 0% 100%);
+
+					@include _tablet {
+						padding: 0.8rem 0;
+					}
+					@include _mobile {
+						max-width: 10.5rem;
+					}
+				}
+
+				@include _tablet {
+					padding: 0.8rem 0;
+				}
+
+				@include _tablet-c(540px) {
+					padding: 0.3rem 0;
+				}
+
+				@include _mobile {
+					max-width: 10.5rem;
+				}
+			}
+
+			.health {
+				background: rgba(32, 191, 100, 0.24);
+
+				&::after {
+					width: 95%;
+					background: rgba(32, 191, 100, 1);
+				}
+			}
+
+			.mana {
+				background: rgba(74, 24, 245, 0.24);
+
+				&::after {
+					width: 65%;
+					background: rgba(74, 24, 245, 1);
+				}
+			}
+
+			.rage {
+				background: rgba(242, 171, 61, 0.24);
+
+				&::after {
+					width: 35%;
+					background: rgba(242, 171, 61, 1);
+				}
+			}
+
+			&:nth-last-of-type(2) {
+				margin: 0 0 7rem 2rem;
+
+				.vs_block__imgs-statistic-block {
+					flex-direction: row-reverse;
+
+					.title {
+						margin: 0 0 0 2rem;
+						text-align: end;
+
+						@include _tablet-c(540px) {
+							margin-left: 0.5rem;
+						}
+					}
+
+					.progressbar {
+						clip-path: polygon(0 0, 100% 0%, 100% 100%, 3% 100%);
+
+						&::after {
+							right: 0;
+							clip-path: polygon(0 0, 100% 0%, 100% 100%, 3% 100%);
+						}
+					}
+
+					.health {
+						&::after {
+							width: 50%;
+						}
+					}
+
+					.mana {
+						&::after {
+							width: 90%;
+						}
+					}
+
+					.rage {
+						&::after {
+							width: 80%;
+						}
+					}
+				}
+
+				@include _tablet {
+					margin-bottom: 4rem;
+				}
+
+				@include _tablet-c(767px) {
+					margin-bottom: 0;
+				}
+			}
+
+			@include _tablet {
+				margin-bottom: 4rem;
+			}
+			@include _tablet-c(767px) {
+				margin-bottom: 0;
+			}
+		}
+
+		@include _desktop-c(1536px) {
+			min-height: 100vh;
+		}
+
+		@include _tablet-pro {
+			min-height: 50vh;
+		}
+
+		@include _tablet {
+			min-height: 42vh;
+		}
+
+		@include _tablet-c(767px) {
+			min-height: 32vh;
+		}
+
+		@include _mobile {
+			min-height: 22vh;
+		}
+	}
+
+	@include _desktop-c(1536px) {
+		padding: 0 6rem;
+	}
+
+	@include _tablet {
+		padding: 0 2rem;
+	}
+}

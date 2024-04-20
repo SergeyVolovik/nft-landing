@@ -1,0 +1,118 @@
+.footer {
+	@include section(0);
+	padding-top: 4.1rem;
+
+	background: rgba(74, 24, 245, 0.04);
+
+	&__info {
+		width: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		&-block {
+			display: flex;
+			justify-content: center;
+			padding: 0 1.5rem;
+
+			&-links {
+				display: flex;
+				list-style: none;
+
+				.link {
+					margin: 0 2rem 0 0;
+
+					font-size: 1.6rem;
+					font-family: $fontFamilyMain2;
+					font-weight: 400;
+
+					& > a {
+						color: rgba(255, 255, 255, 0.6);
+
+						text-transform: none;
+						text-decoration: none;
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					@include _desktop-c(1271px) {
+						@include font_link(2.4rem, 400, $fontFamilyMain2);
+						font-style: normal;
+					}
+
+					@include _tablet {
+						padding: 1rem;
+						margin: 0 0 1rem 0;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+
+					@include _tablet-c(540px) {
+						font-size: 1.6rem;
+					}
+				}
+
+				@include _tablet {
+					flex-direction: column;
+				}
+			}
+
+			@include _tablet {
+				width: 100%;
+				max-width: none;
+				padding: 0;
+
+				text-align: center;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		@include _tablet-c(540px) {
+			justify-content: center;
+		}
+	}
+
+	.social {
+		margin: 0 0 2.7rem 0;
+
+		@include _tablet {
+			margin-bottom: 1.7rem;
+		}
+	}
+
+	&__create {
+		width: 100%;
+
+		padding: 2.4rem 0 1.2rem 0;
+
+		display: flex;
+		justify-content: center;
+
+		& > span {
+			color: rgba(255, 255, 255, 0.6);
+			font-size: 1.6rem;
+			font-family: $fontFamilyMain;
+
+			@include _tablet-c(540px) {
+				font-size: 1.4rem;
+				text-align: center;
+			}
+
+			@include _mobile {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	@include _tablet-c(540px) {
+		padding: 2.4rem 2rem 0 2rem;
+	}
+}

@@ -1,0 +1,146 @@
+.home {
+	width: 100%;
+	height: 100vh;
+
+	padding: 24.2rem 6.4rem 32rem 6.4rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+
+	&__title {
+		margin: 0 0 4rem 0;
+
+		font-size: 4rem;
+		font-family: $fontFamilyMain3;
+		font-style: italic;
+		font-weight: 400;
+		text-align: center;
+
+		@include gradient_text;
+
+		@include _tablet {
+			font-size: 6rem;
+		}
+
+		@include _tablet-c(767px) {
+			margin-bottom: 4rem;
+
+			font-size: 4rem;
+		}
+
+		@include _tablet-c(431px) {
+			margin-bottom: 3rem;
+
+			// font-size: 2.4rem;
+			font-size: 3rem;
+		}
+
+		@include _mobile-xs {
+			font-size: 2.4rem;
+		}
+	}
+
+	&__inner {
+		margin-bottom: 2rem;
+
+		display: flex;
+
+		@include _tablet {
+			width: 100%;
+
+			justify-content: space-between;
+			// justify-content: center;
+		}
+
+		@include _tablet-c(639px) {
+			flex-wrap: wrap;
+		}
+
+		@include _mobile {
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		margin-right: 2.4rem;
+
+		@include _tablet {
+			margin-right: 0;
+		}
+
+		@include _tablet-c(639px) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__btn,
+	&__btn-second {
+		width: calc(50% - 1.6rem);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		text-decoration: none;
+
+		@include btn;
+		@include btn_padding(1.5rem, 4.4rem);
+
+		@include _tablet-c(767px) {
+			font-size: 1.6rem;
+		}
+
+		@include _tablet-c(639px) {
+			width: 100%;
+		}
+
+		@include _mobile {
+			max-width: 26.1rem;
+		}
+	}
+
+	&__btn-second {
+		background-origin: border-box;
+		background-clip: content-box, border-box;
+
+		& > span {
+			display: block;
+			text-align: center;
+
+			@include gradient_text;
+			font-family: $fontFamilyMain;
+			font-style: unset;
+			font-weight: 900;
+
+			text-shadow: 0px 0px #00000000;
+
+			z-index: 1;
+		}
+
+		@include btn_padding(1.5rem, 8.5rem);
+		@include gradient_border;
+
+		@include hover_gradient;
+	}
+
+	@include _tablet {
+		padding-right: 6rem;
+		padding-left: 6rem;
+	}
+
+	@include _tablet-m {
+		padding-right: 3rem;
+		padding-left: 3rem;
+	}
+
+	@include _mobile {
+		padding: 13rem 1.5rem 15rem 1.5rem;
+	}
+
+	@include _mobile-c($mobile-m) {
+		padding: 5rem 1.5rem 15rem 1.5rem;
+	}
+}

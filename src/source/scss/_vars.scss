@@ -1,0 +1,52 @@
+$white: #ffffff;
+$black: #000000;
+
+// Main
+$fontFamilyMain: "Poppinse", sans-serif;
+$fontFamilyMain2: "Open Sans", sans-serif;
+$fontFamilyMain3: "MADE Soulmaze", sans-serif;
+$fontFamilyMain4: "MADE Soulmaze Outline", sans-serif;
+$fontSizeMain: 10px;
+$fontWeightMain: 800;
+$fontWeightMain2: 700;
+
+$colorMain1: #ea3944;
+$colorMain2: #4f18f5;
+$gradient: linear-gradient(259.65deg, #ea3944 -27.46%, #4f18f5 119.91%);
+
+$bgColorMain: #01001c;
+$bgTransparentMain: rgba(0, 0, 0, 0.3);
+
+$borderRadiusMain: 0.4rem;
+
+$boxShadow: rgba(255, 255, 255, 0.8) 0px 2px 4px -1px, rgba(255, 255, 255, 0.8) 0px 4px 5px 0px,
+	rgba(255, 255, 255, 0.8) 0px 1px 10px 0px;
+
+/* Link */
+$colorLink: $white;
+$fontSizeLink: 2rem;
+$transitionSpeed: 0.4s;
+
+/* Button */
+$colorBtn: $white;
+$bgBtn: $gradient;
+$borderWidth: 0.2rem;
+$borderBtn: linear-gradient(259.65deg, #ea3944 -27.46%, #4f18f5 119.91%);
+
+$fontSizeBtn: 2rem;
+$fontSizeBtnMob: 1.4rem;
+
+/* Title */
+$fontSizeSectionTitle: 8rem;
+$fontFamilySectionTitle: $fontFamilyMain3;
+$bgSectionTitle: $gradient;
+
+/* NavBar */
+$navbarHeight: 8rem;
+$bgMenu: linear-gradient(180deg, rgba(74, 24, 245, 0.15) 0%, rgba(1, 0, 28, 0.15) 100%);
+$bgMenuMob: linear-gradient(90deg, rgba(79, 24, 245, 1) 0%, rgba(234, 57, 68, 1) 100%);
+
+/* Home */
+$fontSizeText: 4rem;
+
+$bgBoxShadowDiv: linear-gradient(360deg, #01001c 9.45%, rgba(1, 0, 28, 0) 71.25%);

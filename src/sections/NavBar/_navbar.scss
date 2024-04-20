@@ -1,0 +1,76 @@
+.navbar {
+	width: 100%;
+	min-height: $navbarHeight;
+
+	padding: 2rem 12rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	background: $bgMenu;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	z-index: 1000;
+
+	&__block {
+		flex: 1 1 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include _desktop-c(1271px) {
+			display: none;
+		}
+	}
+
+	&__block-mob {
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		position: fixed;
+		top: -100%;
+		left: 0;
+		right: 0;
+		background: $bgColorMain;
+
+		transition: top $transitionSpeed linear;
+		z-index: 2;
+
+		.social {
+			position: absolute;
+			bottom: 5rem;
+			
+			&__icon {
+				max-width: 4.2rem;
+			}
+		}
+	}
+
+	&__block-mob.active {
+		top: 0;
+	}
+
+	@include _desktop-m {
+		padding: 2rem 8rem;
+	}
+	@include _tablet {
+		padding: 2rem 6rem;
+	}
+	@include _tablet-m {
+		padding: 2rem 3rem;
+	}
+	@include _mobile {
+		min-height: 4.4rem;
+		padding: 1rem 1.6rem;
+	}
+	@include _mobile-xs {
+		padding: 1rem 1.4rem;
+	}
+}

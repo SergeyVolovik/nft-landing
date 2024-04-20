@@ -1,0 +1,14 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 289" width="303" height="289">
+	<title>vs-svg</title>
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="375.411" y1="-55.7" x2="-103.882" y2="35.684">
+			<stop offset="0" stop-color="#ea3944"  />
+			<stop offset="1" stop-color="#4f18f5"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: url(#grd1);stroke-width: 16 } 
+	</style>
+	<path id="Layer" class="shp0" d="M219.43 8L136.64 164.77L42.89 164.77L10 8L79.36 8L93.01 111.47L102.41 111.47L143.58 8L219.43 8Z" />
+</svg>

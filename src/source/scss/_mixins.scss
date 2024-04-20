@@ -1,0 +1,234 @@
+@mixin font_link($fz, $fw, $ff) {
+	font-family: $ff;
+	font-size: $fz;
+	font-weight: $fw;
+}
+
+@mixin hover_link {
+	transition: all 0.2s linear;
+
+	border: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	-webkit-tap-highlight-color: transparent;
+
+	&:hover {
+		transform: translateY(-0.3rem);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+@mixin btn {
+	background: $bgBtn;
+	border-radius: $borderRadiusMain;
+
+	color: $colorBtn;
+	font-family: $fontFamilyMain;
+	font-size: $fontSizeBtn;
+	font-weight: $fontWeightMain;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+	white-space: nowrap;
+
+	cursor: pointer;
+	z-index: 1;
+
+	border: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	-webkit-tap-highlight-color: transparent;
+
+	@include hover_link;
+
+	@include _mobile {
+		font-size: $fontSizeBtnMob;
+	}
+}
+
+@mixin btn_padding($p1, $p2) {
+	padding: $p1 $p2;
+}
+
+@mixin section($mt) {
+	width: 100%;
+
+	margin-top: $mt;
+	padding: 0 12rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include _desktop-m {
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+
+	@include _desktop-c(1366px) {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	@include _tablet-xs {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+	@include _mobile {
+		padding-left: 3.75rem;
+		padding-right: 3.75rem;
+	}
+
+	@include _mobile-m {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	@include _mobile-xs {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+@mixin section_title {
+	margin-bottom: 7.4rem;
+
+	font-size: $fontSizeSectionTitle;
+	text-align: center;
+	@include gradient_text;
+
+	@include _tablet {
+		font-size: 5rem;
+		letter-spacing: normal;
+	}
+
+	@include _tablet-c(540px) {
+		margin-bottom: 1.14rem;
+
+		font-size: 3.2rem;
+	}
+
+	@include _mobile {
+		font-size: 2.4rem;
+	}
+}
+
+@mixin sub_title {
+	width: 100%;
+	max-width: 101rem;
+
+	margin-bottom: 10.4rem;
+
+	@include text(2.4rem);
+
+	line-height: 3.2rem;
+}
+
+@mixin text($fz) {
+	font-size: $fz;
+	font-family: $fontFamilyMain2;
+	color: $white;
+	text-align: justify;
+	text-transform: uppercase;
+	line-height: 3rem;
+}
+
+@mixin paragraph($mb) {
+	width: 100%;
+	max-width: 101.1rem;
+
+	margin-bottom: $mb;
+
+	@include text(2rem);
+
+	@include _tablet-c(540px) {
+		margin-bottom: 4rem;
+		font-size: 1.6rem;
+	}
+
+	@include _mobile {
+		font-size: 1rem;
+		line-height: 1.6;
+		text-align: justify;
+	}
+}
+
+@mixin stroke_text($fz, $ls, $lh) {
+	background: $gradient;
+
+	font-size: $fz;
+	font-family: $fontFamilyMain3;
+	font-weight: 400;
+	font-style: italic;
+	color: $bgColorMain;
+	letter-spacing: $ls;
+	line-height: $lh;
+
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 6px transparent;
+}
+
+@mixin gradient_text {
+	font-family: $fontFamilySectionTitle;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: 0.3rem;
+
+	text-transform: uppercase;
+	background: $gradient 0 0 no-repeat padding-box;
+	background-clip: text;
+	fill: transparent;
+	border: none;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin gradient_border {
+	background: $gradient;
+	border-radius: $borderRadiusMain;
+	position: relative;
+
+	&::before {
+		content: "";
+
+		display: block;
+
+		background: $bgColorMain;
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		bottom: 2px;
+		left: 2px;
+	}
+}
+
+@mixin hover_gradient {
+	&:hover,
+	&:active {
+		&::before {
+			display: none;
+		}
+
+		& > span {
+			background: none;
+			-webkit-background-clip: unset;
+			-webkit-text-fill-color: $white;
+		}
+	}
+}
+
+@mixin hover_gradient_burger {
+	&:hover,
+	&:active {
+		background: $bgBtn;
+
+		& > span {
+			background: none;
+			-webkit-background-clip: unset;
+			-webkit-text-fill-color: $white;
+		}
+	}
+}

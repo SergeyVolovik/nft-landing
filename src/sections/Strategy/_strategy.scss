@@ -1,0 +1,96 @@
+.strategy {
+	@include section(13.6rem);
+
+	&__title {
+		@include section_title;
+	}
+
+	&__paragraph {
+		@include paragraph(9rem);
+		max-width: 103.6rem;
+	}
+
+	&__block {
+		width: 100%;
+		max-width: 106.6rem;
+
+		display: flex;
+		flex-direction: column;
+
+		&-info {
+			width: 100%;
+			margin: 0 0 11.6rem 0;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			&-title {
+				@include stroke_text(5rem, 0, 1.2);
+				padding: 0 1rem;
+
+				max-width: 47rem;
+				text-align: center;
+
+				@include _tablet {
+					margin: 0 0 4rem 0;
+				}
+
+				@include _tablet-c(540px) {
+					font-size: 3.4rem;
+				}
+
+				@include _mobile {
+					margin-bottom: 0.4rem;
+					font-size: 2.4rem;
+				}
+			}
+
+			&-paragraph {
+				@include paragraph(0);
+				max-width: 55.3rem;
+
+				@include _desktop-c(1150px) {
+					max-width: 100%;
+					text-align: justify;
+				}
+
+				@include _tablet-c(540px) {
+					margin-bottom: 0;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include _desktop-c(1150px) {
+				margin-bottom: 4rem;
+				flex-direction: column;
+			}
+
+			@include _mobile {
+				margin: 0 0 2.4rem 0;
+			}
+		}
+	}
+
+	@include _tablet-c(540px) {
+		margin-top: 6rem;
+	}
+
+	@include _mobile {
+		padding-left: 4.4rem;
+		padding-right: 4.4rem;
+	}
+
+	@include _mobile-c(376px) {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+	@include _mobile-xs {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}

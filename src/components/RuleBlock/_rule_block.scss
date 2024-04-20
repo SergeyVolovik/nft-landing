@@ -1,0 +1,179 @@
+.rule {
+	width: 100%;
+
+	&__inner {
+		width: 100%;
+		max-width: 116rem;
+
+		margin: 0 auto;
+		padding: 0 7rem 0 0;
+
+		display: flex;
+		align-items: center;
+
+		&-item {
+			width: 100%;
+
+			padding: 0 5.9rem 0 0;
+
+			position: relative;
+
+			&-img {
+				max-width: 36.7rem;
+				object-fit: contain;
+
+				@include _tablet {
+					max-width: 25rem;
+				}
+
+				@include _tablet-c(767px) {
+					max-width: 20rem;
+				}
+
+				@include _tablet-c(540px) {
+					max-width: 12.6rem;
+				}
+
+				@include _mobile-xs {
+					max-width: 9.6rem;
+				}
+			}
+			&-shadow {
+				width: 100%;
+				min-height: 18.8rem;
+
+				@include _tablet-c(767px) {
+					min-height: 9rem;
+				}
+
+				@include _tablet-c(540px) {
+					min-height: 6.2rem;
+				}
+
+				background: linear-gradient(360deg, #01001c 9.45%, rgba(1, 0, 28, 0) 71.25%);
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+
+			@include _tablet-c(767px) {
+				padding: 0 2.5rem 0 0;
+			}
+
+			@include _mobile {
+				padding: 0 2.5rem 0 0;
+			}
+
+			@include _mobile-xs {
+				padding-right: 1rem;
+			}
+		}
+
+		&:nth-of-type(2) {
+			padding: 0 0 0 7rem;
+
+			flex-direction: row-reverse;
+
+			.rule__inner-item {
+				padding: 0 0 0 4rem;
+
+				@include _tablet-c(540px) {
+					padding: 0 0 0 1rem;
+				}
+
+				@include _mobile {
+					padding: 0 0 0 1rem;
+				}
+			}
+
+			@include _tablet {
+				padding: 0;
+			}
+
+			@include _tablet-c(540px) {
+				margin-left: 2rem;
+				padding: 0 0 0 1rem;
+			}
+
+			@include _mobile {
+				margin-left: 0;
+				padding: 0;
+			}
+		}
+
+		@include _tablet {
+			padding: 0;
+			margin-bottom: 2.4rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include _tablet-xs {
+			padding: 0;
+			margin: 0 auto 2.4rem 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1.2rem;
+		&-span {
+			font-size: 8rem;
+			font-family: $fontFamilyMain3;
+			font-weight: 400;
+			font-style: italic;
+
+			@include gradient_text;
+
+			@include _tablet {
+				font-size: 4rem;
+			}
+
+			@include _mobile {
+				font-size: 2.4rem;
+			}
+
+			@include _mobile-xs {
+				font-size: 1.6rem;
+			}
+		}
+
+		&-stroke {
+			margin-left: 1rem;
+			padding: 0 0 0 1rem;
+
+			@include stroke_text(8rem, 1rem, 0);
+
+			@include _tablet {
+				font-size: 4rem;
+				margin-left: 0;
+			}
+
+			@include _tablet-c(540px) {
+				@include stroke_text(3rem, 1rem, 0);
+				padding: 0 0 0 0.8rem;
+			}
+
+			@include _mobile {
+				@include stroke_text(2.4rem, 1rem, 0);
+			}
+
+			@include _mobile-xs {
+				@include stroke_text(1.6rem, 1rem, 0);
+			}
+		}
+	}
+	&__paragraph {
+		@include text(2rem);
+
+		@include _tablet-xs {
+			@include text(1.6rem);
+		}
+
+		@include _mobile {
+			@include text(1rem);
+			line-height: 1.6rem;
+		}
+	}
+}

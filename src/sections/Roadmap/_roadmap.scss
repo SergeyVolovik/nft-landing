@@ -1,0 +1,18 @@
+.roadmap {
+	@include section(20.7rem);
+
+	&__title {
+		@include section_title;
+	}
+
+	&__paragraph {
+		@include paragraph(9rem);
+		@include _mobile {
+			text-align: justify;
+		}
+	}
+
+	@include _tablet-c(540px) {
+		margin-top: 6rem;
+	}
+}

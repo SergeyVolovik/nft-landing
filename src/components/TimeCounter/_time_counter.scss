@@ -1,0 +1,102 @@
+.counter,
+.counter__end {
+	color: $white;
+	font-size: $fontSizeLink;
+}
+
+.counter {
+	width: 100%;
+	max-width: 145rem;
+
+	margin: 0 1rem 6rem 0;
+	padding: 0 2rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__block {
+		width: 25.55555%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		font-family: $fontFamilyMain2;
+		font-weight: $fontWeightMain2;
+		text-transform: uppercase;
+
+		.number {
+			margin-right: -1rem;
+			margin-bottom: 4rem;
+
+			padding: 0 0 0 1rem;
+
+			@include stroke_text(20rem, 2.2rem, 17.5rem);
+
+			@include _desktop-c(1537px) {
+				font-size: 13rem;
+				line-height: 11.5rem;
+
+				margin-bottom: 2rem;
+			}
+
+			@include _tablet {
+				font-size: 11rem;
+				line-height: 9.5rem;
+				letter-spacing: 1.5rem;
+			}
+
+			@include _tablet-c(851px) {
+				font-size: 7rem;
+				line-height: 6.5rem;
+			}
+
+			@include _tablet-c(541px) {
+				font-size: 4.5rem;
+				line-height: 1;
+				letter-spacing: 1rem;
+			}
+
+			@include _mobile {
+				font-size: 5rem;
+			}
+
+			@include _mobile-m {
+				font-size: 4rem;
+			}
+
+			@include _mobile-xs {
+				margin-bottom: 1rem;
+				letter-spacing: 0.9rem;
+			}
+
+			@include _mobile-c(319px) {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	@include _desktop-c(1535px) {
+		max-width: 114rem;
+	}
+
+	@include _tablet {
+		width: 100%;
+		max-width: none;
+		padding: 0;
+	}
+
+	@include _tablet-c(851px) {
+		font-size: 1.6rem;
+	}
+
+	@include _tablet-c(541px) {
+		margin-bottom: 4rem;
+		font-size: 1.4rem;
+	}
+
+	@include _mobile-c(301px) {
+		font-size: 1.2rem;
+	}
+}
