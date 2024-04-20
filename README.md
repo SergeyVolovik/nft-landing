@@ -13,7 +13,7 @@ The Official Parrots' Fight Club Landing Page with information about NFT parrots
 Project is created with:
 
 - Node: v12.14.1
-- React: v16.0.0
+- React: v17.0.2
 - Styling: SCSS (SASS v6.0.1)
 - npm: v6.13.4
 
